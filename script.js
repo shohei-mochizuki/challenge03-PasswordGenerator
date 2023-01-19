@@ -66,12 +66,12 @@ function writePassword() {
 
     // Prompt 3-1: In case user selected at least 1 type of characters
     if (includeLower || (includeUpper || (includeNumber || includeSpecial))) {
-      confirmation = window.confirm("You have selected the following criteria. Are you okay with them?\n✅ = Selected\n❌ = Not selected\n______________________\nNumber of characters: " + passwordLength +
+      confirmation = window.confirm("You have selected the following criteria. Are you okay with them?\n✅ = Selected\n❌ = Not selected\n----------------------------------------\nNumber of characters: " + passwordLength +
       "\nLowercase letters: " + includeYesNo[0] +
       "\nUppercase letters: " + includeYesNo[1] +
       "\nNumbers: " + includeYesNo[2] +
       "\nSpecial characters: " + includeYesNo[3] +
-      "\n______________________"
+      "\n----------------------------------------"
       );
     } else {
       // Prompt 3-2: In case user selected none of them
@@ -132,7 +132,7 @@ function writePassword() {
     }
 
     // Step 5: Indicate the new password in alarm window and return the value as a result of the function so that it can be shown in the box as well
-    window.alert("Your new password (length = " + passwordLength + "):\n" + createdPassword + "\n✅This password will be shown in the box below as well after clicking OK here.");
+    window.alert("Your new password (length = " + passwordLength + ") is shown below:\n----------------------------------------\n" + createdPassword + "\n----------------------------------------\n✅This password will be shown in the box below as well after clicking OK here.");
 
     return createdPassword;
   }
